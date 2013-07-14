@@ -3,8 +3,8 @@ SpreeOgpos
 
 This was an attempt at making a spree extension, however
 
-```rake routes | grep retail_pos
-```
+```rake routes | grep retail_pos```
+
 produces no output
 
 Installation
