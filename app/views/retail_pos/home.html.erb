@@ -1,0 +1,24 @@
+<%= render 'layouts/application' %>
+
+<div id="retail_pos" class="pos_container" style="display: inline-block">
+<div style="display: inline-block; vertical-align: top">
+  <div class="pos_collection_area">
+    <div class="pos_detail_entry"><input type="text" id="pos_input"></div>
+    <div class="pos_order_details" id="pos_order_details"></div>
+    <div class="pos_detail_entry pos_total"><input type="text" id="pos_total" readonly="true" value="$0.00"></div>
+  </div>
+</div><div style="display: inline-block; vertical-align: top">
+<%= render partial: 'pos_product_listing', locals: { products: @products } %>
+<%= render 'pos_keypad' %>
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        // MDR 15/07/2013 - TODO - Load API key from database
+        // MDR 15/07/2013 - TODO - Authenticate user
+        window.pos = new org.omnigate.retail_pos('#retail_pos', 'a35c832e524b50524a22603663c2463e24338e1460ca29f8');
+    });
+</script>

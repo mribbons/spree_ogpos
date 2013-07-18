@@ -1,0 +1,12 @@
+<div class="pos_collection_area">
+  <div class="pos_product_area">
+    <% products.each do |product| %>
+    <% Rails.logger.debug "#{product.inspect}" %>
+    <div class="pos_product_tile">
+    <div data-product-id="<%= "#{product.id}" %>" class="content">
+    <%= product.name %><br>
+    </div>
+    </div>
+    <% end %>
+  </div>
+</div>

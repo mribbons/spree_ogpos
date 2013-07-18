@@ -1,6 +1,6 @@
 Spree::Core::Engine.routes.draw do
   # Add your extension routes here
-  get "retail_pos" => "home#retail_pos"
+  get "retail_pos" => "retail_pos#home"
 
   # This also doesn't work
   #resources :home do

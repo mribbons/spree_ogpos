@@ -1,0 +1,84 @@
+// Place all the styles related to the PosFront controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+*= require_tree .
+*= require twitter/bootstrap
+
+*/
+
+//#@import "twitter/bootstrap";
+//@import "twitter/bootstrap/variable";
+
+$button_unit: 60px;
+$button_w_unit: $button_unit * 1.618;
+
+.pos_container {
+  //@include gradientBar(darken(#0000AA, 0%), darken(#000088, 8%));
+  padding: 8px;
+}
+
+.pos_keypad_num {
+  width: $button_w_unit;
+  height: $button_unit;
+  display: inline-block;
+}
+
+.pos_keypad_num_0 {
+  width: $button_w_unit*2;
+}
+
+.pos_keypad_num > input[type="button"] {
+  width:100%; font-size: 20px
+}
+
+.pos_collection_area
+{
+  width: auto;
+  display: inline-block;
+  background-color: #00ff00;
+  border-radius: 4px;
+  //@include gradientBar(darken(#00ADEE, 0%), darken(#00ADEE, 8%));
+  //border: 5px;
+}
+
+.pos_product_area
+{
+  display: inline-block;
+  width: $button_w_unit * 6;
+  height: $button_unit * 5;
+}
+
+.pos_detail_entry
+{
+  vertical-align: middle;
+  font-size: 20px;
+  color: #fff;
+  height: $button_unit / 2;
+}
+
+.pos_detail_entry > input {
+  height: $button_unit / 2;
+  width: $button_w_unit * 3;
+  font-size: 20px;
+}
+
+.pos_order_details
+{
+  padding: 2px;
+  color: #fff;
+  font-size: 20px;
+  //display: inline-block;
+  vertical-align: top;
+  width: $button_w_unit * 3;
+  height: $button_unit * 8 + 4px;
+}
+
+.pos_product_tile
+{
+  color: #fff;
+  size: 16px;
+  display: inline-block;
+  width: $button_w_unit;
+  height: $button_unit * 2;
+}
