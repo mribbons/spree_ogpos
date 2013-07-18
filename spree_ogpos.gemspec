@@ -1,7 +1,7 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree-ogpos'
+  s.name        = 'spree_ogpos'
   s.version     = '2.0.3'
   s.summary     = 'Spree POS'
   s.description = 'Retail Point Of Sale Frontend'
