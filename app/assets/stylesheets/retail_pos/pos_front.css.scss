@@ -14,6 +14,7 @@ $button_unit: 60px;
 $button_w_unit: $button_unit * 1.618;
 
 .pos_container {
+  background-color: #00009A;
   //@include gradientBar(darken(#0000AA, 0%), darken(#000088, 8%));
   padding: 8px;
 }
@@ -36,7 +37,7 @@ $button_w_unit: $button_unit * 1.618;
 {
   width: auto;
   display: inline-block;
-  background-color: #00ff00;
+  background-color: darken(#00ADEE, 0%);
   border-radius: 4px;
   //@include gradientBar(darken(#00ADEE, 0%), darken(#00ADEE, 8%));
   //border: 5px;
