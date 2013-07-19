@@ -1,3 +1,4 @@
+<% require 'spree/backend' %>
 <%# render 'layouts/application' %>
 
 <div id="retail_pos" class="pos_container" style="display: inline-block">
@@ -13,10 +14,12 @@
 </div>
 
 </div>
-
+<%# Prevent Spree.more error which stops $(document).ready being called below %>
+<%= render 'spree/admin/shared/translations' %>
 <script type="text/javascript">
 
     $(document).ready(function() {
+        console.log("retail_pos initializing");
         // MDR 15/07/2013 - TODO - Load API key from database
         // MDR 15/07/2013 - TODO - Authenticate user
         window.pos = new org.omnigate.retail_pos('#retail_pos', 'a35c832e524b50524a22603663c2463e24338e1460ca29f8');
