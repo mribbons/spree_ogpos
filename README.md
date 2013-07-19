@@ -1,11 +1,7 @@
 SpreeOgpos
 ==========
 
-This was an attempt at making a spree extension, however
-
-```rake routes | grep retail_pos```
-
-produces no output
+Spree OG POS - A Retail Point Of Sale frontend for Spree
 
 Installation
 ------------
