@@ -10,6 +10,8 @@ module SpreeOgpos
         # MDR 20/07/2013 - TODO - Loop through js and css assets in retail_pos folder so we dont have to append_file each one explicitly
         append_file 'app/assets/javascripts/application.js', "//= require retail_pos/namespace\n"
         append_file 'app/assets/javascripts/application.js', "//= require retail_pos/pos_front\n"
+        # MDR 20/07/2013 - Don't require_tree . - this includes admin/all.js which causes js errors
+        inject_into_file 'app/assets/javascripts/application.js', '//= break_tree . ', :before => /\/\/\= require_tree ./, :verbose => true
       end
 
       def add_stylesheets
