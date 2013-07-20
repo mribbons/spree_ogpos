@@ -23,6 +23,6 @@
         console.log("retail_pos initializing");
         // MDR 15/07/2013 - TODO - Load API key from database
         // MDR 15/07/2013 - TODO - Authenticate user
-        window.pos = new org.omnigate.retail_pos('#retail_pos', <%= if @user then "#{'@user.spree_api_key'}" else "null" end %>);
+        window.pos = new org.omnigate.retail_pos('#retail_pos', <%= if @user then "'#{@user.spree_api_key}'".html_safe else "null" end %>);
     });
 </script>

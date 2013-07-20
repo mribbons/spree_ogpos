@@ -3,7 +3,7 @@ class RetailPosController < ApplicationController
 
   def home
     @products = Spree::Product.all
-    @user = Spree::User.all.detect{ |u| u.spree_api_key.length > 500 }
+    @user = Spree::User.all.detect{ |u| u.spree_api_key.length > 0 }
     Rails.logger.debug "@user: #{@user.inspect}"
     #render :layout => false
   end
