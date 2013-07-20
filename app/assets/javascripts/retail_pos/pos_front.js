@@ -41,12 +41,14 @@ $(function () {
             //this.create_order_req();
 
             // TODO debugging, user should init new order
-            this.order_number = "R667135804";
+            //this.order_number = "R667135804";
 
             this.total = 0;
             this.lines = [];
 
-            this.update_total_req();
+            //this.update_total_req();
+
+            if (!this.api_key) alert("Spree API not connected.");
         }
 
         this.init=init;
