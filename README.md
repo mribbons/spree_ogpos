@@ -8,7 +8,7 @@ Installation
 
 Get a working Spree store going first:
 
-https://github.com/mribbons/spree/spree
+https://github.com/spree/spree
 
 Then add spree_ogpos to your Gemfile:
 
